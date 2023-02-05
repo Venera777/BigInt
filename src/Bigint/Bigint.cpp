@@ -101,6 +101,7 @@ namespace ACA
     BigInt &BigInt::operator+=(const BigInt &rhs)
     {
         *this += rhs;
+        return *this;
     }
     BigInt &BigInt::operator-=(const BigInt &rhs)
     {
