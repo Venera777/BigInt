@@ -1,4 +1,4 @@
-#include <Bigint.h>
+#include <BigInt.h>
 
 #include <iostream>
 

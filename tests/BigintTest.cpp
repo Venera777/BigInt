@@ -1,4 +1,4 @@
-#include <Bigint.h>
+#include <BigInt.h>
 #include <gtest/gtest.h>
 
 #include <vector>

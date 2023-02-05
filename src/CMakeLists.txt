@@ -1,4 +1,4 @@
-add_subdirectory(Bigint)
+add_subdirectory(BigInt)
 
 add_executable(main main.cpp)
-target_link_libraries(main PRIVATE Bigint)
+target_link_libraries(main PRIVATE BigInt)

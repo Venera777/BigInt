@@ -1,4 +1,4 @@
-#include <Bigint.h>
+#include <BigInt.h>
 #include <iostream>
 #include <vector>
 
@@ -43,6 +43,18 @@ namespace ACA
         *this -= 1;
 
         return *this;
+    } 
+    BigInt BigInt::operator++(int)
+    {
+        BigInt temp = *this;
+        *this += 1;
+        return temp;
+    }
+    BigInt BigInt::operator--(int)
+    {
+        BigInt temp = *this;
+        *this -= 1;
+        return temp;
     }
     BigInt &BigInt::operator=(const BigInt &other)
     {
@@ -84,56 +96,17 @@ namespace ACA
     {
         return !(lhs > rhs);
     }
-
-    BigInt &BigInt::operator++()
-    {
-        *this *= 1;
-        return *this;
-    }
-
-    BigInt BigInt::operator++(int)
-    {
-        BigInt temp = *this;
-        *this += 1;
-        return temp;
-    }
-
-    BigInt &BigInt::operator--()
-    {
-        *this -= 1;
-        return *this;
-    }
-
-    BigInt BigInt::operator--(int)
-    {
-        BigInt temp = *this;
-        *this -= 1;
-        return temp;
-    }
+   
 
     BigInt &BigInt::operator+=(const BigInt &rhs)
     {
         *this += rhs;
     }
-
-    BigInt operator+(BigInt lhs, const BigInt &rhs)
-    {
-        lhs += rhs;
-        return lhs;
-    }
-
     BigInt &BigInt::operator-=(const BigInt &rhs)
     {
         *this -= rhs;
         return *this;
     }
-
-    BigInt operator-(BigInt lhs, const BigInt &rhs)
-    {
-        lhs -= rhs;
-        return lhs;
-    }
-
     BigInt &BigInt::operator*=(const BigInt &rhs)
     {
         *this = *this * rhs;
