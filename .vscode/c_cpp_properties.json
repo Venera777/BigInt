@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/src/Bigint/include"
+                "${workspaceFolder}/src/Bigint/include",
+                "C:/Users/User/Desktop"
             ],
             "defines": [
                 "_DEBUG",
